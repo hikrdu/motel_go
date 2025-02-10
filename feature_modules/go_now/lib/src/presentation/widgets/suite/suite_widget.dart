@@ -24,7 +24,10 @@ class SuiteWidget extends StatelessWidget {
             child: SuiteCategoryWidget(
               categories: suite?.categoriaItens,
               onTap: () {
-                // TODO: Navigate to Suite Item Page
+                navigateTransition(
+                  nextPage: SuiteItemsPage(suite: suite!),
+                  direction: TransitionDirectionEnum.bottomToTop,
+                );
               },
             ),
           ),

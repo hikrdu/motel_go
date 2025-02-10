@@ -28,3 +28,8 @@
 ## 0.0.7
 
 * Implemented Suite Period Widget and Discount Badge
+
+
+## 0.0.8
+
+* Implemented Suite Item Page Details
