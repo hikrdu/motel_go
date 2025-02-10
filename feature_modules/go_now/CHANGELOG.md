@@ -24,3 +24,7 @@
 ## 0.0.6
 
 * Implemented Suite Category
+
+## 0.0.7
+
+* Implemented Suite Period Widget and Discount Badge

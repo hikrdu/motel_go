@@ -28,8 +28,18 @@ class SuiteWidget extends StatelessWidget {
               },
             ),
           ),
-
-          // TODO: Add Periods
+          ...List.generate(
+            suite?.periodos?.length ?? 0,
+            (index) {
+              final PeriodModel? period = suite?.periodos?[index];
+              return SuitePeriodWidget(
+                period: period,
+                onPeriodSelected: () {
+                  // TODO: Navigate to Suite Reservation
+                },
+              );
+            },
+          ),
         ],
       ),
     );
