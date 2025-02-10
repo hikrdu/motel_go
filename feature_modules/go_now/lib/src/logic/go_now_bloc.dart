@@ -1,13 +1,11 @@
 import 'package:feature_module_base/feature_module_base.dart';
 
 class GoNowBloc extends Bloc<GoNowEvent, GoNowState> {
-  final GoNowRepository goNowRepository = GoNowRepository();
-
   GoNowBloc() : super(MotelsInitialState()) {
     on<FetchMotelsEvent>((event, emit) async {
       emit(MotelsLoadingState());
       try {
-        await goNowRepository.fetchMotels().then((motels) {
+        await goNowRepository?.fetchMotels().then((motels) {
           emit(MotelsLoadedState(motels!));
         });
       } catch (e) {
