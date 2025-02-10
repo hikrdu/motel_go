@@ -13,6 +13,8 @@ dependencies:
     sdk: flutter
   app:
     path: ../../app
+  go_now:
+    path: ../go_now
   splash:
     path: ../splash
 

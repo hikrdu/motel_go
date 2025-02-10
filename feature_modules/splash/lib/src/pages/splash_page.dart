@@ -8,6 +8,11 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(Duration(seconds: 2)).then((_) async {
+        if (context.mounted) Navigator.pushReplacementNamed(context, AppRoutes.goNowRoute);
+      });
+    });
     return Scaffold(
       key: Key('splash_page_scaffold'),
       body: SizedBox(

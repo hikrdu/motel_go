@@ -13,3 +13,7 @@
 ## 1.0.0+3
 
 * Added Splash module and update references.
+
+## 1.0.0+4
+
+* Added GoNow module and update references.

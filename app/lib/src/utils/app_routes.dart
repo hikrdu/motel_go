@@ -9,6 +9,8 @@ class AppRoutes {
     switch (settings.name) {
       case splashRoute:
         return MaterialPageRoute(builder: (context) => const SplashPage());
+      case goNowRoute:
+        return MaterialPageRoute(builder: (context) => const GoNowBase());
       default:
         return null;
     }

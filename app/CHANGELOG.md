@@ -12,4 +12,8 @@
 
 ## 0.0.2
 
-* Update AppRoutes to navigate to SplashPage
+* Update AppRoutes to navigate to Splash Module
+
+## 0.0.3
+
+* Update AppRouters to navigate to GoNow Module
