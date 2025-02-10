@@ -1,0 +1,30 @@
+import 'package:feature_module_base/feature_module_base.dart';
+import 'package:flutter/material.dart';
+
+class SuiteWidget extends StatelessWidget {
+  final SuiteModel? suite;
+  const SuiteWidget({
+    super.key,
+    required this.suite,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: context.screenSize.width * 0.9,
+      child: Column(
+        children: [
+          SuiteMainImageWidget(
+            suite: suite,
+            onTap: () {
+              // TODO: Navigate to Suite Gallery
+            },
+          ),
+          // TODO: Add Category
+
+          // TODO: Add Periods
+        ],
+      ),
+    );
+  }
+}

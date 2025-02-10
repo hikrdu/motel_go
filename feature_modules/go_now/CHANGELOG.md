@@ -15,3 +15,7 @@
 ## 0.0.4
 
 * Implemented Menu Drawer (withot navigation)
+
+## 0.0.5
+
+* Implemented Suite Item with Main image and Name

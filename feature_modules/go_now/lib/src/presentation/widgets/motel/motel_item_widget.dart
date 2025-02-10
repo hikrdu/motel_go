@@ -14,7 +14,19 @@ class MotelItemWidget extends StatelessWidget {
         MotelFilterWidget(),
         Divider(height: 2),
         MotelInfoWidget(motel: motel),
-        // TODO: Implement Suite List
+        SizedBox(
+          height: context.screenSize.height * 0.8,
+          child: PageView.builder(
+            itemCount: motel?.suites?.length ?? 0,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (_, index) {
+              final suite = motel?.suites?[index];
+              return SuiteWidget(
+                suite: suite,
+              );
+            },
+          ),
+        ),
       ],
     );
   }
