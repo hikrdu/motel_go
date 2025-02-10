@@ -7,3 +7,7 @@
 # 0.0.2
 
 * Implemented GoNow Base and Main Page with AppBar Widget
+
+# 0.0.3
+
+* Implemented Motel Item with Visutal Filter and Info

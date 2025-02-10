@@ -52,9 +52,8 @@ class GoNowMainPage extends StatelessWidget {
                   child: ListView.builder(
                     itemCount: data?.moteis?.length ?? 0,
                     itemBuilder: (context, index) {
-                      return null;
-
-                      // TODO: return MotelItem
+                      final motel = data?.moteis?[index];
+                      return MotelItemWidget(motel: motel);
                     },
                   ),
                 ),
