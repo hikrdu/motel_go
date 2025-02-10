@@ -17,3 +17,7 @@
 ## 0.0.3
 
 * Update AppRouters to navigate to GoNow Module
+
+## 0.0.4
+
+* Added images in assets
