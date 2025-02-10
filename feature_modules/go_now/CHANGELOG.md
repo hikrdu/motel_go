@@ -33,3 +33,7 @@
 ## 0.0.8
 
 * Implemented Suite Item Page Details
+
+## 0.0.9
+
+* Implemented Suite Gallery Page

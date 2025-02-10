@@ -17,7 +17,12 @@ class SuiteWidget extends StatelessWidget {
           SuiteMainImageWidget(
             suite: suite,
             onTap: () {
-              // TODO: Navigate to Suite Gallery
+              navigateTransition(
+                nextPage: SuiteGalleryPage(
+                  suite: suite ?? SuiteModel(),
+                ),
+                direction: TransitionDirectionEnum.bottomToTop,
+              );
             },
           ),
           Card(
