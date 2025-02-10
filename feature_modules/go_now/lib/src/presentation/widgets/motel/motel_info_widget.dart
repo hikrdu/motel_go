@@ -18,6 +18,7 @@ class MotelInfoWidget extends StatelessWidget {
     return ListTile(
       title: Text(
         motel?.fantasia?.decode() ?? '',
+        key: Key('fantasy_key'),
         style: TextStyle(fontSize: 22),
       ),
       subtitle: Column(
@@ -25,7 +26,8 @@ class MotelInfoWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            '${motel!.distancia!.toStringAsFixed(2)} km - ${motel?.bairro?.decode()}',
+            '${motel?.distancia?.toStringAsFixed(2)} km - ${motel?.bairro?.decode()}',
+            key: Key('distance_key'),
             style: TextStyle(fontSize: 18),
           ),
           Row(
@@ -51,7 +53,8 @@ class MotelInfoWidget extends StatelessWidget {
           ? null
           : ClipOval(
               child: Image.network(
-                motel!.logo!,
+                motel?.logo ?? '',
+                key: Key('logo_key'),
                 width: 35,
                 height: 35,
                 fit: BoxFit.cover,
@@ -59,6 +62,7 @@ class MotelInfoWidget extends StatelessWidget {
             ),
       trailing: showMoreInfo
           ? GestureDetector(
+              key: Key('more_info_key'),
               onTap: () => onTap!(),
               child: Row(
                 mainAxisSize: MainAxisSize.min,

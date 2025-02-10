@@ -5,10 +5,6 @@ import 'package:mocktail/mocktail.dart';
 
 import '../../util_test.dart';
 
-class MockGoNowRepository extends Mock implements GoNowRepository {}
-
-class MockBaseModel extends Mock implements BaseModel {}
-
 void main() {
   initializeUtilTest();
   late MockGoNowRepository mockGoNowRepository;

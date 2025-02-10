@@ -12,9 +12,9 @@ class SuiteCategoryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> displayItems = categories!.take(5).map((category) => buildCategoryItems(category.icone!)).toList();
+    List<Widget>? displayItems = categories?.take(5).map((category) => buildCategoryItems(category.icone!)).toList();
 
-    displayItems.add(showMore());
+    displayItems?.add(showMore());
 
     return GestureDetector(
       onTap: () => onTap(),
@@ -22,7 +22,7 @@ class SuiteCategoryWidget extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 8),
         child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: (categories != null && categories!.isNotEmpty) ? displayItems : []),
+            children: (categories != null && categories!.isNotEmpty) ? displayItems! : []),
       ),
     );
   }
