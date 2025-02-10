@@ -46,3 +46,7 @@
 ## 0.0.11
 
 * Implemented Suite Reservation Page with carosel images
+
+## 0.0.12
+
+* Implemented Reservation values Details 

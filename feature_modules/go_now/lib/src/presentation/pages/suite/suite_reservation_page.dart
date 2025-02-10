@@ -35,8 +35,8 @@ class SuiteReservationPage extends StatelessWidget {
                 onTap: () {},
               ),
             ),
-            // TODO: Implement Reservation Details
-
+            SizedBox(height: 8.0),
+            SuiteReservationDetailsWidget(period: period),
             // TODO: Implement Reservation More Info
 
             // TODO: Implement Policy
