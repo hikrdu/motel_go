@@ -50,3 +50,7 @@
 ## 0.0.12
 
 * Implemented Reservation values Details 
+
+## 0.0.13
+
+Implemented Reservation more Details 

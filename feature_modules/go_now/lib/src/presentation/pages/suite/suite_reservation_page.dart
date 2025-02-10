@@ -37,7 +37,8 @@ class SuiteReservationPage extends StatelessWidget {
             ),
             SizedBox(height: 8.0),
             SuiteReservationDetailsWidget(period: period),
-            // TODO: Implement Reservation More Info
+            SizedBox(height: 8.0),
+            SuiteReservationMoreWidget(),
 
             // TODO: Implement Policy
           ],
