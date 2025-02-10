@@ -66,3 +66,7 @@
 ## 0.0.16
 
 * Implemented Reservation Bottom Bar
+
+## 0.0.17
+
+* Implemented Favorite Bloc to Motel

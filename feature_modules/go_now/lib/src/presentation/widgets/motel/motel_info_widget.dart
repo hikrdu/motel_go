@@ -75,8 +75,20 @@ class MotelInfoWidget extends StatelessWidget {
                 ],
               ),
             )
-          : Icon(
-              Icons.favorite,
+          : BlocProvider(
+              create: (_) => FavoriteBloc(),
+              child: BlocBuilder<FavoriteBloc, FavoriteState>(builder: (context, state) {
+                bool isFavorited = state is FavoriteChangedState ? state.isFavorited : false;
+                return IconButton(
+                  onPressed: () {
+                    context.read<FavoriteBloc>().changeFavorite(isFavorited);
+                  },
+                  icon: Icon(
+                    Icons.favorite,
+                    color: isFavorited ? Colors.red : Colors.grey,
+                  ),
+                );
+              }),
             ),
     );
   }
