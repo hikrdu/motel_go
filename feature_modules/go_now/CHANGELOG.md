@@ -53,4 +53,8 @@
 
 ## 0.0.13
 
-Implemented Reservation more Details 
+* Implemented Reservation more Details 
+
+## 0.0.14
+
+* Implemented Reservation Policy

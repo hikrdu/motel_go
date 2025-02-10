@@ -6,5 +6,6 @@ export 'suite_name_widget.dart';
 export 'suite_period_widget.dart';
 export 'suite_reservation_details_widget.dart';
 export 'suite_reservation_more_widget.dart';
+export 'suite_reservation_policy_widget.dart';
 export 'suite_utils.dart';
 export 'suite_widget.dart';
