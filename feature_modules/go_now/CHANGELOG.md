@@ -41,3 +41,8 @@
 ## 0.0.10
 
 * Implemented Motel Badge Rate Widget
+
+
+## 0.0.11
+
+* Implemented Suite Reservation Page with carosel images

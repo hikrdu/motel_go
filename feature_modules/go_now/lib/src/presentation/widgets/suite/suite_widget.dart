@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 
 class SuiteWidget extends StatelessWidget {
   final SuiteModel? suite;
+  final MotelModel? motel;
+
   const SuiteWidget({
     super.key,
     required this.suite,
+    this.motel,
   });
 
   @override
@@ -43,7 +46,13 @@ class SuiteWidget extends StatelessWidget {
               return SuitePeriodWidget(
                 period: period,
                 onPeriodSelected: () {
-                  // TODO: Navigate to Suite Reservation
+                  navigateTransition(
+                    nextPage: SuiteReservationPage(
+                      suite: suite!,
+                      period: period!,
+                      motel: motel,
+                    ),
+                  );
                 },
               );
             },

@@ -23,6 +23,7 @@ class MotelItemWidget extends StatelessWidget {
               final suite = motel?.suites?[index];
               return SuiteWidget(
                 suite: suite,
+                motel: motel,
               );
             },
           ),

@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 
 class MotelInfoWidget extends StatelessWidget {
   final MotelModel? motel;
+  final bool showMoreInfo;
+
   final Function? onTap;
   const MotelInfoWidget({
     super.key,
     this.motel,
+    this.showMoreInfo = false,
     this.onTap,
   });
 
@@ -54,9 +57,27 @@ class MotelInfoWidget extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-      trailing: Icon(
-        Icons.favorite,
-      ),
+      trailing: showMoreInfo
+          ? GestureDetector(
+              onTap: () => onTap!(),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    'mais info',
+                    textAlign: TextAlign.end,
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  Icon(
+                    Icons.keyboard_arrow_down,
+                    size: 16,
+                  )
+                ],
+              ),
+            )
+          : Icon(
+              Icons.favorite,
+            ),
     );
   }
 }

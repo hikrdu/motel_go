@@ -1,6 +1,6 @@
 name: go_now
 description: "Go Now Module."
-version: 0.0.10
+version: 0.0.1
 homepage:
 publish_to: none
 
@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   feature_module_base:
     path: ../feature_module_base
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
