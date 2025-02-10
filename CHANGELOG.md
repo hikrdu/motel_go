@@ -17,3 +17,8 @@
 ## 1.0.0+4
 
 * Added GoNow module and update references.
+
+## 1.0.0+5
+
+* Update app icons and assets for Android and iOS
+* Initialization of baseRepository
