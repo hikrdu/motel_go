@@ -1,0 +1,26 @@
+name: go_now
+description: "Go Now Module."
+version: 0.0.17
+homepage:
+publish_to: none
+
+environment:
+  sdk: ^3.6.1
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  feature_module_base:
+    path: ../feature_module_base
+  carousel_slider: ^5.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  bloc_test: ^10.0.0
+  mocktail: ^1.0.4
+  mocktail_image_network: ^1.2.0
+
+flutter:
