@@ -28,7 +28,18 @@ class MotelInfoWidget extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              // TODO: Implement badget rate
+              MotelBadgeRateWidget(
+                rate: motel?.media,
+                qtdAvaliacoes: motel?.qtdAvaliacoes,
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    showDragHandle: true,
+                    builder: (_) => MotelRateDetailsWidget(motel: motel),
+                  );
+                },
+              ),
             ],
           )
         ],

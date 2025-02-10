@@ -37,3 +37,7 @@
 ## 0.0.9
 
 * Implemented Suite Gallery Page
+
+## 0.0.10
+
+* Implemented Motel Badge Rate Widget
