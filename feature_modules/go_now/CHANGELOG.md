@@ -19,3 +19,8 @@
 ## 0.0.5
 
 * Implemented Suite Item with Main image and Name
+
+
+## 0.0.6
+
+* Implemented Suite Category

@@ -20,7 +20,14 @@ class SuiteWidget extends StatelessWidget {
               // TODO: Navigate to Suite Gallery
             },
           ),
-          // TODO: Add Category
+          Card(
+            child: SuiteCategoryWidget(
+              categories: suite?.categoriaItens,
+              onTap: () {
+                // TODO: Navigate to Suite Item Page
+              },
+            ),
+          ),
 
           // TODO: Add Periods
         ],
