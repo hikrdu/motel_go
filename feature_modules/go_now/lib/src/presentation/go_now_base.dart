@@ -15,8 +15,11 @@ class GoNowBase extends StatelessWidget {
             if (state is MotelsLoadingState) {
               return Center(child: CircularProgressIndicator());
             } else if (state is MotelsLoadedState) {
-              // TODO: Change to correct page
-              return SizedBox.shrink();
+              final data = state.base.data;
+
+              return GoNowMainPage(
+                data: data,
+              );
             } else if (state is MotelsErrorState) {
               return Center(child: Text(state.error));
             } else {
