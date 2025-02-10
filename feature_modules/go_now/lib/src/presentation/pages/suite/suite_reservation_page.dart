@@ -40,8 +40,27 @@ class SuiteReservationPage extends StatelessWidget {
             SizedBox(height: 8.0),
             SuiteReservationMoreWidget(),
             SuiteReservationPolicyWidget(),
-
-            // TODO: Implement Policy
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                child: ListTile(
+                  leading: BlocProvider(
+                    create: (_) => ReservationBloc(),
+                    child: BlocBuilder<ReservationBloc, ReservationState>(builder: (context, state) {
+                      bool value = state is ReservationChangedState ? state.privacyChecked : false;
+                      return Checkbox(
+                        value: value,
+                        onChanged: (_) {
+                          context.read<ReservationBloc>().changePrivacy(value);
+                        },
+                        activeColor: context.theme.primaryColor,
+                      );
+                    }),
+                  ),
+                  title: Text('estou ciente e de acordo com a política de reserva.'), // TODO: Check translations
+                ),
+              ),
+            )
           ],
         ),
       ),

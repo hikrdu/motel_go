@@ -58,3 +58,7 @@
 ## 0.0.14
 
 * Implemented Reservation Policy
+
+## 0.0.15
+
+* Implemented Reservation Accept checkbox with Bloc
