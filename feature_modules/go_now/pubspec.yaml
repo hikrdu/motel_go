@@ -1,6 +1,6 @@
 name: go_now
 description: "Go Now Module."
-version: 0.0.15
+version: 0.0.16
 homepage:
 publish_to: none
 

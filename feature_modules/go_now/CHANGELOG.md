@@ -62,3 +62,7 @@
 ## 0.0.15
 
 * Implemented Reservation Accept checkbox with Bloc
+
+## 0.0.16
+
+* Implemented Reservation Bottom Bar

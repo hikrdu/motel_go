@@ -1,3 +1,4 @@
+export 'suite_bottom_bar_widget.dart';
 export 'suite_category_widget.dart';
 export 'suite_discount_badge_widget.dart';
 export 'suite_image_carousel_widget.dart';

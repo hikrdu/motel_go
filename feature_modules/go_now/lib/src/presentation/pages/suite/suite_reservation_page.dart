@@ -64,7 +64,7 @@ class SuiteReservationPage extends StatelessWidget {
           ],
         ),
       ),
-      // TODO: Implement Bottom Navigation Bar
+      bottomNavigationBar: SuiteBottomBarWidget(period: period),
     );
   }
 }
