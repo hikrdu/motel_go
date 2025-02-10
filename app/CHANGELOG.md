@@ -9,3 +9,7 @@
 * Added Routes file.
 * Added Theme file.
 * Added AppWidget file with Material App.
+
+## 0.0.2
+
+* Update AppRoutes to navigate to SplashPage

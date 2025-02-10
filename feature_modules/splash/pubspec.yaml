@@ -1,5 +1,5 @@
-name: feature_module_base
-description: "Dependencies shared by the feature modules."
+name: splash
+description: "Splash Module."
 version: 0.0.1
 homepage:
 publish_to: none
@@ -11,17 +11,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  app:
-    path: ../../app
-  splash:
-    path: ../splash
+  feature_module_base:
+    path: ../feature_module_base
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
 
-
 flutter:
-
-    
+  assets:
+    - packages/app/assets/images/logo.webp

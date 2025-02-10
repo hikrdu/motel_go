@@ -1,6 +1,6 @@
 name: app
 description: "App Project Base."
-version: 0.0.1
+version: 0.0.2
 homepage:
 publish_to: none
 
@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  feature_module_base: 
+    path: ../feature_modules/feature_module_base
   bloc: ^9.0.0
   equatable: ^2.0.7
   flutter_bloc: ^9.0.0

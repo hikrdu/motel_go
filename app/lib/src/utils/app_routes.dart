@@ -1,4 +1,4 @@
-import 'package:app/app.dart';
+import 'package:feature_module_base/feature_module_base.dart';
 import 'package:flutter/material.dart';
 
 class AppRoutes {
@@ -7,6 +7,8 @@ class AppRoutes {
 
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch (settings.name) {
+      case splashRoute:
+        return MaterialPageRoute(builder: (context) => const SplashPage());
       default:
         return null;
     }

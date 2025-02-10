@@ -8,3 +8,8 @@
 * Added App package as Project Base.
 * Changed main.dart to call App widget.
 * Added Feature Module Base as Dependencies shared by the feature modules.
+
+
+## 1.0.0+3
+
+* Added Splash module and update references.
