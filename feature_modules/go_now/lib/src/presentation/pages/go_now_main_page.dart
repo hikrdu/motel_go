@@ -14,7 +14,7 @@ class GoNowMainPage extends StatelessWidget {
       canPop: false,
       child: Scaffold(
           appBar: PageAppBarWidget(),
-          //drawer: TODO: Implement drawer
+          drawer: MenuDrawerWidget(),
           body: Column(
             children: [
               ClipPath(

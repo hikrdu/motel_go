@@ -11,3 +11,7 @@
 # 0.0.3
 
 * Implemented Motel Item with Visutal Filter and Info
+
+## 0.0.4
+
+* Implemented Menu Drawer (withot navigation)
