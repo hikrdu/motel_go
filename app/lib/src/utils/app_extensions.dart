@@ -11,11 +11,6 @@ extension BuildContextExtensions on BuildContext {
 
   /// Returns the size of the screen.
   Size get screenSize => MediaQuery.sizeOf(this);
-
-  /// Returns the translated string for the given key.
-  ///
-  /// [key] The key of the string to be translated.
-  String getString(String key) => Localizations.of<dynamic>(this, dynamic).translate(key);
 }
 
 extension StringExtension on String {
@@ -23,6 +18,7 @@ extension StringExtension on String {
   ///
   /// Returns the decoded string in lowercase.
   String decode() {
-    return utf8.decode(runes.toList()).toLowerCase();
+    final result = utf8.decode(runes.toList()).toLowerCase();
+    return result;
   }
 }

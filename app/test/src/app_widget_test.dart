@@ -6,7 +6,7 @@ import '../utils_test.dart';
 
 void main() {
   initializeUtilTest();
-  testWidgets('AppWidget has a title and routes', (WidgetTester tester) async {
+  testWidgets('AppWidget has a title, routes, and handles unknown routes', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const AppWidget());
 
@@ -33,5 +33,12 @@ void main() {
 
     // Advance time to let any pending timers complete.
     await tester.pump(const Duration(seconds: 2));
+
+    // Test unknown route
+    tester.state<NavigatorState>(find.byType(Navigator)).pushNamed('/unknown-route');
+    await tester.pumpAndSettle();
+
+    // Verify that the unknown route is handled correctly
+    expect(find.text('4o4'), findsOneWidget);
   });
 }
