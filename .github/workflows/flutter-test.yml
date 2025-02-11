@@ -1,0 +1,80 @@
+name: Flutter Test & Coverage
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run Tests & Generate Coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.27.0  
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Run tests with coverage
+        run: flutter test --coverage
+
+      - name: Convert coverage to LCOV
+        run: genhtml coverage/lcov.info -o coverage/html
+
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage/html
+
+      - name: Check coverage threshold (Optional)
+        run: |
+          min_coverage=75
+          coverage=$(grep -Po '\d+(?=%)' coverage/lcov.info | tail -1)
+          echo "Current coverage: $coverage%"
+          if [ "$coverage" -lt "$min_coverage" ]; then
+            echo "Coverage is below $min_coverage%! Failing the build."
+            exit 1
+          fi
+
+      - name: Add test badge to README
+        run: |
+          echo "![Flutter Tests](https://github.com/hikrdu/motel_go/actions/workflows/flutter-test.yml/badge.svg)" >> README.md
+
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.27.0 
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: motel_go
+          path: build/app/outputs/flutter-apk/motel_go.apk
