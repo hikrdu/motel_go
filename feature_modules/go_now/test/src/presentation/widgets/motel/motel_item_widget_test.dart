@@ -8,6 +8,7 @@ import '../../../../util_test.dart';
 // class MockMotelModel extends Mock implements MotelModel {}
 
 void main() {
+  initializeUtilTest();
   group('MotelItemWidget', () {
     late MockMotelModel motelModel;
 
@@ -41,8 +42,8 @@ void main() {
 
     testWidgets('renders PageView', (tester) async {
       when(() => motelModel.suites).thenReturn([
-        SuiteModel(),
-        SuiteModel(),
+        MockSuiteModel(),
+        MockSuiteModel(),
       ]);
 
       await tester.pumpWidget(

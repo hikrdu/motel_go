@@ -34,8 +34,8 @@ class MockDataModel extends Mock implements DataModel {
 }
 
 class MockMotelModel extends Mock implements MotelModel {
-  @override
-  List<SuiteModel>? get suites => [MockSuiteModel()];
+  // @override
+  // List<SuiteModel>? get suites => [MockSuiteModel()];
 }
 
 class MockSuiteModel extends Mock implements SuiteModel {}
