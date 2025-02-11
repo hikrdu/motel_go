@@ -18,10 +18,12 @@ jobs:
 
     - name: Set up Flutter
       run: |
+        sudo apt-get update
+        sudo apt-get install -y git wget unzip xz-utils
         git clone https://github.com/flutter/flutter.git -b stable
         echo "$GITHUB_WORKSPACE/flutter/bin" >> $GITHUB_PATH
         flutter --version
-
+        
     - name: Install dependencies
       run: flutter pub get
 
