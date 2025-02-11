@@ -8,6 +8,8 @@ Flutter project designed to list and manage motels efficiently.
 - Search functionality
 - Detailed motel information
 
+==========================================================================================
+
 ## Summary
 
 A project with a modular structure in Flutter where each feature is separated into its own package, created using the `flutter create --template=package` command. This kind of architecture is typically referred to as a Modular Flutter Architecture.
@@ -25,7 +27,7 @@ The advantages of this modular approach include:
 
 More detailed info [here](https://github.com/hikrdu/motel_go/blob/master/feature-based-architecture.pdf).
 
-====================================================================================================================
+==========================================================================================
 
 ## Getting Started
 
@@ -55,7 +57,7 @@ After this, execute `flutter pub run build_runner` in the root of the project an
 
 After everything is properly installed, invoke 'Run > Start Debugging' on menu or just press `F5`.
 
-====================================================================================================================
+==========================================================================================
 
 ##### Depedencies:
 
