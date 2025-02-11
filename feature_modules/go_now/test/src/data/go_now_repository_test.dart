@@ -5,14 +5,14 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
 
-class MockBaseRepository extends Mock implements BaseRepository {}
+import '../../util_test.dart';
 
 void main() {
+  initializeUtilTest();
   late GoNowRepository repository;
 
   setUp(() {
     repository = GoNowRepository();
-    baseRepository = MockBaseRepository();
   });
 
   group('GoNowRepository', () {

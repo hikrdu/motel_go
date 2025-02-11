@@ -5,9 +5,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
 
-class MockClient extends Mock implements http.Client {}
+import '../../utils_test.dart';
 
 void main() {
+  initializeUtilTest();
   group('BaseRepository tests', () {
     final baseUrl = 'https://www.example.com/';
     late MockClient client;

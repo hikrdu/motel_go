@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MockMotelModel extends Mock implements MotelModel {}
+import '../../../../util_test.dart';
+
+// class MockMotelModel extends Mock implements MotelModel {}
 
 void main() {
   group('MotelItemWidget', () {
