@@ -14,36 +14,28 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      - name: Set up JDK
-        uses: actions/setup-java@v2
+      - name: Set Up Java
+        uses: actions/setup-java@v3.12.0
         with:
-          java-version: '11'
+          distribution: 'oracle'
+          java-version: '17'
 
       - name: Set up Flutter
-        run: |
-          git clone https://github.com/flutter/flutter.git
-          echo "FLUTTER_ROOT=$(pwd)/flutter" >> $GITHUB_ENV
-          echo "PATH=\$FLUTTER_ROOT/bin:\$PATH" >> $GITHUB_ENV
-          source $GITHUB_ENV
-          export PATH="$PATH:`pwd`/flutter/bin"
-          flutter --version
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.22.2'
+          channel: 'stable'
 
       - name: Install dependencies
-        run: |
-          source $GITHUB_ENV
-          flutter pub get
+        run: flutter pub get
 
       - name: Run tests
-        run: |
-          source $GITHUB_ENV
-          flutter test
+        run: flutter test
 
       - name: Build APK
-        run: |
-          source $GITHUB_ENV
-          flutter build apk --release
+        run: flutter build apk --release
 
       - name: Rename APK
         run: mv build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/motel_go.apk
