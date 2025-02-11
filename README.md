@@ -8,6 +8,25 @@ Flutter project designed to list and manage motels efficiently.
 - Search functionality
 - Detailed motel information
 
+## Summary
+
+A project with a modular structure in Flutter where each feature is separated into its own package, created using the `flutter create --template=package` command. This kind of architecture is typically referred to as a Modular Flutter Architecture.
+
+In this setup, you have:
+
+- Core Layer (lib): Contains the main entry point `main.dart`.
+- App Layer (app): Contains core application-level widgets like `app_widget.dart` and folders for utilities, models, helpers, and services.
+- Feature Modules (feature_modules): Each feature is its own package with its own `pubspec.yaml` and contains its own layers (pages, repositories, widgets).
+
+The advantages of this modular approach include:
+- Separation of Concerns: Different features of your app are isolated, making it easier to manage and scale.
+- Reusability: Individual packages can be reused across different projects.
+- Parallel Development: Teams can work on different features simultaneously without much conflict.
+
+More detailed info [here](feature-based-architecture.pdf).
+
+====================================================================================================================
+
 ## Getting Started
 
 In order to get started, you will need to install:
