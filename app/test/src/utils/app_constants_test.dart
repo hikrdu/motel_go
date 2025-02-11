@@ -16,7 +16,7 @@ void main() {
     });
 
     test('motelFilters should contain all the available filters', () {
-      expect(AppConstants.motelFilters, [
+      expect(AppConstants().motelFilters, [
         'com desconto',
         'disponível',
         'hidro',
@@ -36,7 +36,7 @@ void main() {
     });
 
     test('motelFilters should have 15 elements', () {
-      expect(AppConstants.motelFilters.length, 15);
+      expect(AppConstants().motelFilters.length, 15);
     });
   });
 }

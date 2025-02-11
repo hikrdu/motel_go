@@ -26,8 +26,6 @@ void main() {
   });
 
   group('navigateTransition', () {
-    appNavigatorKey = GlobalKey<NavigatorState>();
-
     testWidgets('navigates to nextPage with default transition', (tester) async {
       final nextPage = Container();
       await tester.pumpWidget(MaterialApp(

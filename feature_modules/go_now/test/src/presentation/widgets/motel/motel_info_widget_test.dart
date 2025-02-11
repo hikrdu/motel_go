@@ -7,20 +7,16 @@ import '../../../../util_test.dart';
 
 void main() {
   initializeUtilTest();
+  late MockMotelModel motelModel;
+
+  setUpAll(() {
+    motelModel = MockMotelModel();
+  });
+  tearDown(() {
+    // Reset mocktail state after each test
+    reset(mockClient);
+  });
   group('MotelInfoWidget', () {
-    late MockMotelModel motelModel;
-    late MockHttpClient mockClient;
-
-    setUpAll(() {
-      motelModel = MockMotelModel();
-      mockClient = MockHttpClient();
-    });
-
-    tearDown(() {
-      // Reset mocktail state after each test
-      reset(mockClient);
-    });
-
     testWidgets('renders ListTile with motel information', (tester) async {
       when(() => motelModel.fantasia).thenReturn('Test Motel');
       when(() => motelModel.distancia).thenReturn(1.23);
@@ -51,31 +47,6 @@ void main() {
 
       expect(find.byType(MotelBadgeRateWidget), findsOneWidget);
     });
-
-    // testWidgets('renders logo if available', (tester) async {
-    //   final mockResponse = MockHttpResponse(statusCode: 200, body: 'mock-image-data');
-
-    //   when(() async => await mockClient.get(Uri.parse('https://example.com/logo.png')))
-    //       .thenAnswer((_) => Future.value(mockResponse));
-
-    //   when(() => motelModel.logo).thenReturn('https://example.com/logo.png');
-
-    //   await tester.pumpWidget(
-    //     MaterialApp(
-    //       home: Scaffold(
-    //         body: MotelInfoWidget(motel: motelModel),
-    //       ),
-    //     ),
-    //   );
-
-    //   expect(find.byType(ClipOval), findsOneWidget);
-
-    //   final logoKey = find.byKey(Key('logo_key'));
-    //   final logoWidget = tester.widget(logoKey) as Image;
-    //   expect(logoWidget.width, 35);
-    //   expect(logoWidget.height, 35);
-    //   expect(find.byType(Image), findsOneWidget);
-    // });
 
     testWidgets('renders more info button when showMoreInfo is true', (tester) async {
       await tester.pumpWidget(

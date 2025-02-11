@@ -52,7 +52,7 @@ class SuiteReservationDetailsWidget extends StatelessWidget {
                           'valor da suíte', // TODO: Check translations
                           style: TextStyle(fontSize: 18),
                         ),
-                        value: period.valor!),
+                        value: period.valor != null ? period.valor! : 0),
                     Divider(indent: 16, endIndent: 16),
                     // Discount
                     if (period.desconto != null)
@@ -61,7 +61,7 @@ class SuiteReservationDetailsWidget extends StatelessWidget {
                         children: [
                           buildSummaryItem(
                             label: SuiteDiscountBadgeWidget(period: period),
-                            value: period.desconto!.desconto! * -1,
+                            value: period.desconto != null ? period.desconto!.desconto! * -1 : 0,
                             fontWeight: FontWeight.bold,
                             discount: true,
                           ),
@@ -74,7 +74,7 @@ class SuiteReservationDetailsWidget extends StatelessWidget {
                           'taxa de serviço', // TODO: Check translations
                           style: TextStyle(fontSize: 18),
                         ),
-                        value: SuiteUtils.serviceTaxCalculator(period.valor!)),
+                        value: period.valor != null ? SuiteUtils.serviceTaxCalculator(period.valor!) : 0),
                     Divider(indent: 16, endIndent: 16),
                     // Total reservation
                     buildSummaryItem(
