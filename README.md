@@ -23,7 +23,7 @@ The advantages of this modular approach include:
 - Reusability: Individual packages can be reused across different projects.
 - Parallel Development: Teams can work on different features simultaneously without much conflict.
 
-More detailed info [here](https://github.com/hikrdu/motel_go/blob/master/Feature-based%20architecture.pdf).
+More detailed info [here](https://github.com/hikrdu/motel_go/blob/master/feature-based-architecture.pdf).
 
 ====================================================================================================================
 
