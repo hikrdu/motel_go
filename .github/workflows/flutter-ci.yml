@@ -38,7 +38,3 @@ jobs:
       with:
         name: release-apk
         path: build/app/outputs/flutter-apk/motel_go.apk
-- name: Set up Flutter
-  uses: actions/setup-flutter@v2
-  with:
-    flutter-version: '3.26.0' # Specify the Flutter version you are using
