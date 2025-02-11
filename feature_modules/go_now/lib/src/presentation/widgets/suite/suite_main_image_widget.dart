@@ -23,7 +23,7 @@ class SuiteMainImageWidget extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.network(
-                  suite!.fotos!.first,
+                  suite?.fotos?.first ?? '',
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) {
                     return Center(

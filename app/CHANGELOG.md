@@ -21,3 +21,8 @@
 ## 0.0.4
 
 * Added images in assets
+
+
+## 0.0.5
+
+* Added tests for models, respositories, utils and AppWidget files

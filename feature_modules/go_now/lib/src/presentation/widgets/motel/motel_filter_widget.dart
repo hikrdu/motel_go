@@ -6,7 +6,7 @@ class MotelFilterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> displayFilters = AppConstants.motelFilters.map((filter) {
+    List<Widget> displayFilters = AppConstants().motelFilters.map((filter) {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4.0),
         child: Chip(

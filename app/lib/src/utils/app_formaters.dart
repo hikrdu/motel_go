@@ -8,9 +8,14 @@ import 'package:intl/intl.dart';
 /// @return The formatted currency string.
 class AppFormater {
   static String currencyFormat(double? value, {bool symbol = true}) {
+    String result;
+    if (value == null) return '';
     if (symbol) {
-      return NumberFormat.simpleCurrency(locale: 'PT_BR').format(value);
+      result = NumberFormat.simpleCurrency(locale: 'PT_BR').format(value).trim();
+    } else {
+      result = NumberFormat.simpleCurrency(locale: 'PT_BR').format(value).replaceAll('R\$', '').trim();
     }
-    return NumberFormat.simpleCurrency(locale: 'PT_BR').format(value).replaceAll('R\$', '');
+    result = result.replaceAll('\u00A0', ' ');
+    return result;
   }
 }

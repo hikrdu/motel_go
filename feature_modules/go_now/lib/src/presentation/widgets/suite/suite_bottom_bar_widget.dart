@@ -32,7 +32,7 @@ class SuiteBottomBarWidget extends StatelessWidget {
                 ),
               ),
               trailing: Padding(
-                padding: const EdgeInsets.only(top: 10.0),
+                padding: const EdgeInsets.only(top: 5.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [

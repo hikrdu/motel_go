@@ -15,13 +15,14 @@ class MotelItemWidget extends StatelessWidget {
         Divider(height: 2),
         MotelInfoWidget(motel: motel),
         SizedBox(
-          height: context.screenSize.height * 0.8,
+          height: context.screenSize.height * 0.75,
           child: PageView.builder(
             itemCount: motel?.suites?.length ?? 0,
             scrollDirection: Axis.horizontal,
             itemBuilder: (_, index) {
               final suite = motel?.suites?[index];
               return SuiteWidget(
+                key: Key('suite_widget_$index'),
                 suite: suite,
                 motel: motel,
               );

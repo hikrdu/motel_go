@@ -13,17 +13,17 @@ class SuiteGalleryPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () {
-              appNavigatorKey.currentState!.pop();
+              appNavigatorKey.currentState?.pop();
             },
             icon: const Icon(Icons.keyboard_arrow_down)),
       ),
       body: Padding(
         padding: EdgeInsets.zero,
         child: ListView.builder(
-          itemCount: (suite.fotos!.length / 2).ceil(),
+          itemCount: suite.fotos != null ? (suite.fotos!.length / 2).ceil() : 0,
           itemBuilder: (context, index) {
             bool isOddRow = index % 2 == 0;
-            List<String> imageUrls = suite.fotos!;
+            List<String> imageUrls = suite.fotos != null ? suite.fotos! : [''];
             if (isOddRow) {
               return buildImage(context, imageUrls[index], isOddRow);
             } else {
@@ -53,6 +53,7 @@ class SuiteGalleryPage extends StatelessWidget {
       ),
       child: Image.network(
         imageUrl,
+        key: Key(imageUrl),
         width: isOddRow ? context.screenSize.width : context.screenSize.width / 2,
         height: 150,
         fit: BoxFit.fill,

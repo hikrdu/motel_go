@@ -21,11 +21,13 @@ class SuiteImageCarouselWidget extends StatelessWidget {
                     BlocBuilder<CarouselBloc, CarouselState>(builder: (context, state) {
                       return CarouselSlider.builder(
                         itemCount: suite.fotos?.length ?? 0,
-                        itemBuilder: (context, index, realIndex) => Image.network(
-                          suite.fotos![index],
-                          width: context.screenSize.width,
-                          height: 350,
-                        ),
+                        itemBuilder: (context, index, realIndex) => suite.fotos != null
+                            ? Image.network(
+                                suite.fotos![index],
+                                width: context.screenSize.width,
+                                height: 350,
+                              )
+                            : SizedBox.shrink(),
                         options: CarouselOptions(
                           height: 350,
                           enlargeCenterPage: true,
@@ -57,18 +59,20 @@ class SuiteImageCarouselWidget extends StatelessWidget {
                       int currentIndex = state is CarouselPageChanged ? state.pageIndex : 0;
                       return Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: suite.fotos!.map((url) {
-                          int index = suite.fotos!.indexOf(url);
-                          return Container(
-                            width: 8.0,
-                            height: 8.0,
-                            margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: currentIndex == index ? Colors.white : Colors.grey,
-                            ),
-                          );
-                        }).toList(),
+                        children: suite.fotos != null
+                            ? suite.fotos!.map((url) {
+                                int index = suite.fotos!.indexOf(url);
+                                return Container(
+                                  width: 8.0,
+                                  height: 8.0,
+                                  margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: currentIndex == index ? Colors.white : Colors.grey,
+                                  ),
+                                );
+                              }).toList()
+                            : [],
                       );
                     },
                   ),

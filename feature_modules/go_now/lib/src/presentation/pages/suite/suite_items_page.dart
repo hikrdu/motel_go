@@ -15,7 +15,7 @@ class SuiteItemsPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () {
-              appNavigatorKey.currentState!.pop();
+              appNavigatorKey.currentState?.pop();
             },
             icon: const Icon(Icons.keyboard_arrow_down)),
       ),
@@ -32,9 +32,9 @@ class SuiteItemsPage extends StatelessWidget {
               ),
             ),
             buildTextWithLines('Principais itens'), // TODO: Check translations
-            buildCategoryItems(suite.categoriaItens!),
+            if (suite.categoriaItens != null) buildCategoryItems(suite.categoriaItens!),
             buildTextWithLines('tem também'), // TODO: Check translations
-            buildItems(suite.itens!),
+            if (suite.itens != null) buildItems(suite.itens!),
           ],
         ),
       ),
