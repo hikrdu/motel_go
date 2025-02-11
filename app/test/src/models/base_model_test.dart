@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import '../../utils_test.dart';
 
 void main() {
+  initializeUtilTest();
   group('BaseModel', () {
     test('fromJson', () {
       final json = {

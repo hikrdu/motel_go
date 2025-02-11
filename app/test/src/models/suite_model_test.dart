@@ -1,7 +1,10 @@
 import 'package:app/app.dart';
 import 'package:flutter_test/flutter_test.dart';
 
+import '../../utils_test.dart';
+
 void main() {
+  initializeUtilTest();
   group('SuiteModel', () {
     test('fromJson', () {
       final json = {

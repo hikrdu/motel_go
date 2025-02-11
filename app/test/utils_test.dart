@@ -1,6 +1,7 @@
 import 'package:feature_module_base/feature_module_base.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart' as http;
 import 'package:mocktail/mocktail.dart';
 
 class MockBaseRepository extends Mock implements BaseRepository {}
@@ -22,6 +23,8 @@ class MockPeriodModel extends Mock implements PeriodModel {}
 class MockSuiteModel extends Mock implements SuiteModel {}
 
 class MockBuildContext extends Mock implements BuildContext {}
+
+class MockClient extends Mock implements http.Client {}
 
 class MockNavigatorState extends Mock implements NavigatorState {
   @override

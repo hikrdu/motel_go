@@ -1,8 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:go_now/src/logic/logic.dart';
 
+import '../../../util_test.dart';
+
 void main() {
   group('CarouselBloc', () {
+    initializeUtilTest();
     late CarouselBloc carouselBloc;
 
     setUp(() {

@@ -6,7 +6,11 @@ class GoNowBloc extends Bloc<GoNowEvent, GoNowState> {
       emit(MotelsLoadingState());
       try {
         await goNowRepository?.fetchMotels().then((motels) {
-          emit(MotelsLoadedState(motels!));
+          if (motels != null) {
+            emit(MotelsLoadedState(motels));
+          } else {
+            emit(MotelsErrorState('Failed to load motels'));
+          }
         });
       } catch (e) {
         emit(MotelsErrorState(e.toString()));
