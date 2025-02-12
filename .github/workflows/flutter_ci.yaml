@@ -1,0 +1,45 @@
+name: Flutter Build and Deploy
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '3.27.4'
+      - name: Activate virtual environment
+        run: |
+          flutter config --enable-windows-validation=false
+          flutter config --enable-macos-validation=false
+      - name: Get dependencies
+        run: flutter pub get
+      - name: Run build_runner
+        run: |
+          for module in $(find . -type d -name 'lib' -exec dirname {} \;); do
+            cd "$module"
+            flutter pub get
+            dart run build_runner build --delete-conflicting-outputs
+            cd ..
+          done
+      - name: Run tests
+        run: flutter test
+      - name: Build APK
+        run: |
+          flutter build apk --release --obfuscate --split-debug-info=.
+          mv app/build/app/outputs/apk/release/app-release.apk motel_go.apk
+      - name: Clean up debug info
+        run: find . -type f -name "*.symbols" -delete
+      - name: Upload to GitHub Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: motel_go.apk
+          path: app/build/app/outputs/apk/release/motel_go.apk
