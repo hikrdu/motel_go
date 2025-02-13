@@ -60,13 +60,13 @@ After everything is properly installed, invoke 'Run > Start Debugging' on menu o
 
 ##### Depedencies:
 
-[BLoC](https://pub.dev/packages/bloc) - State management library that helps implement the BLoC (Business Logic Component) design pattern.
-[Equatable](https://pub.dev/packages/equatable) - A utility that simplifies the process of comparing objects for equality.
-[Flutter Bloc](https://pub.dev/packages/flutter_bloc) - Package that simplifies the integration of BLoC state management patterns.
-[Http](https://pub.dev/packages/http) - a set of high-level functions and classes that make it easy to consume HTTP resources.
-[Intl](https://pub.dev/packages/intl) - A library that provides internationalization (i18n) and localization (l10n) support for Dart and Flutter applications.
-[Material Symbols Icons](https://pub.dev/packages/material_symbols_icons) - a Flutter library that provides access to Material Symbols icons, which are part of Google's Material Design system.
+- [BLoC](https://pub.dev/packages/bloc) - State management library that helps implement the BLoC (Business Logic Component) design pattern.
+- [Equatable](https://pub.dev/packages/equatable) - A utility that simplifies the process of comparing objects for equality.
+- [Flutter Bloc](https://pub.dev/packages/flutter_bloc) - Package that simplifies the integration of BLoC state management patterns.
+- [Http](https://pub.dev/packages/http) - a set of high-level functions and classes that make it easy to consume HTTP resources.
+- [Intl](https://pub.dev/packages/intl) - A library that provides internationalization (i18n) and localization (l10n) support for Dart and Flutter applications.
+- [Material Symbols Icons](https://pub.dev/packages/material_symbols_icons) - a Flutter library that provides access to Material Symbols icons, which are part of Google's Material Design system.
 
 ##### Dev Depedencies:
-[Json Serializable](https://pub.dev/packages/json_serializable) - Code generation library that simplifies the process of serializing and deserializing JSON data to and from Dart objects.
-[BuildRunner](http://pub.dev/packages/build_runner) - Generate .g Files to JsonAnnotation.
+- [Json Serializable](https://pub.dev/packages/json_serializable) - Code generation library that simplifies the process of serializing and deserializing JSON data to and from Dart objects.
+- [BuildRunner](http://pub.dev/packages/build_runner) - Generate .g Files to JsonAnnotation.
