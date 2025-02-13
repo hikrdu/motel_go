@@ -5,8 +5,7 @@ Flutter project designed to list and manage motels efficiently.
 ## Features
 
 - List and manage motels
-- Search functionality
-- Detailed motel information
+- Detailed motel and rooms information
 
 ==========================================================================================
 
