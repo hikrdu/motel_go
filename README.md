@@ -52,7 +52,7 @@ In your terminal, go to your projects directory, and run the following command: 
 
 First of all, we need to make sure we have pulled all the dependencies of the project: run `flutter pub get` in the root of the project and all feature modules to download all the dependencies.
 
-After this, execute `flutter pub run build_runner` in the root of the project and all feature modules to generate `.g.dart` files for JsonSerializable to generate to/from JSON code for a classes and work correctly. More information [here](https://pub.dev/packages/json_serializable).
+After this, execute `flutter pub run build_runner` in the Root of the project, App layer and All Feature Modules to generate `.g.dart` files for JsonSerializable to generate to/from JSON code for a classes and work correctly. More information [here](https://pub.dev/packages/json_serializable).
 
 After everything is properly installed, invoke 'Run > Start Debugging' on menu or just press `F5`.
 
