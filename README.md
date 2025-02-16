@@ -2,6 +2,16 @@
 
 Flutter project designed to list and manage motels efficiently.
 
+## Demo
+
+[Watch the Video](https://github.com/hikrdu/motel_go/blob/master/artifacts/motel_go.mp4)
+
+## Download
+
+[Download APK](https://github.com/hikrdu/motel_go/blob/master/artifacts/motel_go.apk)
+
+==========================================================================================
+
 ## Features
 
 - List and manage motels
